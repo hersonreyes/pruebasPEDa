@@ -1,6 +1,6 @@
 #include<iostream>
 #include<string.h>
-#include<clase.h>
+#include "clase.h"
 
 using namespace std;
 
@@ -35,6 +35,8 @@ void agregarCelulares(){
 
         listaCelulares[i] = new Celulares(codigo, marca, modelo, precio, stock);
         cout<<"producto agregado"<<endl;
+        
+        listaCelulares[i]->mostrar();
 
     }
 
@@ -43,10 +45,16 @@ void agregarCelulares(){
 int main(){
     Celulares celular1;
 
+    /* Esto inserta un solo celular
     celular1.setCodigo(234);
     celular1.setMarca("Samsung");
+    celular1.setModelo("A30");
+    celular1.setPrecio(200);
+    celular1.setStock(100);
+    */
 
-    celular1.getCodigo();
-    celular1.getMarca();
+    //esto agrega una lista de Celulares
+    agregarCelulares();
+    
 
 }
